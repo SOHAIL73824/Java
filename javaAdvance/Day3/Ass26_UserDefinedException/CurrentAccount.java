@@ -1,5 +1,4 @@
-package javaAdvance.Day2.Ass14_Inheritance;
-
+package javaAdvance.Day3.Ass26_UserDefinedException;
 public class CurrentAccount extends Account{
 
 	
@@ -21,13 +20,12 @@ public class CurrentAccount extends Account{
 
 
 
-	public void withdrawAmount(double amount) {
+	public void withdrawAmount(double amount) throws InsufficientBalanceExcpetion {
 		// TODO Auto-generated method stub
-		if( amount<=this.getEligibilityAmount()) {
-			this.balance-=amount;
-		}
-		else {
-			System.out.println("low balance Alert..no withdrawl allowed");
+		if(this.balanceEnquiry()<=amount) {
+			throw new InsufficientBalanceExcpetion();
+		}else {
+			this.balance = this.balance-amount;
 		}
 	}
 	

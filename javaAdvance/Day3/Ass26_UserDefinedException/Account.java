@@ -1,5 +1,4 @@
-package javaAdvance.Day2.Ass14_Inheritance;
-
+package javaAdvance.Day3.Ass26_UserDefinedException;
 public class Account {
 	
 	private int accountNo;
@@ -23,9 +22,7 @@ public class Account {
 	public double balanceEnquiry() {
 		return balance;}
 	
-	public void deposit(double amount) {
-		this.balance+=amount;
-	}
+	public void deposit(double amount) {}
 	
 	
 
